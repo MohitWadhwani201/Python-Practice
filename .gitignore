@@ -1,0 +1,3 @@
+/venv/
+## venv\Scripts\activate windows     source venv/bin/activate  Linux/Mac
+__pycache__/
