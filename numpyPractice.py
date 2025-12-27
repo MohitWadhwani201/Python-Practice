@@ -112,3 +112,79 @@ print(np.log(arr))
 
 
 
+### Array Slicing and Indexing
+
+
+arr=np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12]])
+print(arr[2:])
+
+##Output: [[ 9 10 11 12]]
+
+print(arr[1:])
+
+##Output: [[ 5  6  7  8]
+ #         [ 9 10 11 12]]
+
+print(arr[1:,2:])
+
+
+##Output: [[ 7  8]
+#          [11 12]]
+
+print(arr[0:2,2:4])
+## Output [[3 4]
+#          [7 8]]
+
+print(arr[1:3,1:3])
+## Output [[ 6  7]
+ #        [10 11]]
+
+##Modify Array elements
+
+arr[0][1]=10
+print(arr)
+#[[ 1 10  3  4]
+# [ 5  6  7  8]
+# [ 9 10 11 12]]
+
+arr[1:]=100
+print(arr)
+
+#[[  1  10   3   4]
+# [100 100 100 100]
+# [100 100 100 100]]
+
+### statistical concepts: Normalization
+# To have a mean of 0 and standard deviation of 1
+data = np.array([1,2,3,4,5,6,7,8,9])
+
+#Calculate mean and standard deviation
+mean=np.mean(data)
+std_dev=np.mean(data)
+
+print(f'mean is {mean} and standard devaiation is {std_dev}')
+
+normalized_data=(data-mean)/std_dev
+print("Normalized data: ",normalized_data)
+
+##Output 
+# mean is 5.0 and standard devaiation is 5.0
+# Normalized data:  [-0.8 -0.6 -0.4 -0.2  0.   0.2  0.4  0.6  0.8]
+
+median=np.median(data)
+
+variance=np.var(data)
+print(median,variance)
+## Output: 5.0     6.666666666666667
+
+##Logical Operation
+
+data=np.array([1,2,3,4,5,6,7,8,9,10])
+print(data%2==0)
+## Output : [False  True False  True False  True False  True False  True]
+
+print(data[data>5])
+##Output: [ 6  7  8  9 10]
+
+print(data[((data>5) & (data<9))])
+##Output: [6 7 8]
